@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "img": "weekly-draw/prize1/1.png",
+    "title": "Фирменный шоппер",
+    "type": "type_1"
+  },
+  {
+    "id": 2,
+    "img": "weekly-draw/prize1/2.png",
+    "title": "Подарочный набор из ассортимента Simple Group №1",
+    "type": "type_card"
+  },
+  {
+    "id": 3,
+    "img": "weekly-draw/prize1/3.png",
+    "title": "Промокод на скидку 30% на доставку при заказе от 990 рублей в ресторанах Якитория",
+    "type": "type_card"
+  },
+  {
+    "id": 4,
+    "img": "weekly-draw/prize1/4.png",
+    "title": "Сертификат на 1 000 рублей в рестораны Якитория",
+    "type": "type_card"
+  }
+]

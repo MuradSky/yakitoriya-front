@@ -1,0 +1,44 @@
+ [
+ {
+   "id": 15,
+   "img": "weekly-draw/prize5/1.png",
+   "title": "Умный робот-друг REDDY Air",
+   "type": "type_6"
+ },
+ {
+ "id": 63,
+ "img": "weekly-draw/prize5/2.png",
+ "title": "Умный робот-пылесос RED Solution 6000S",
+ "type": "type_4"
+ },
+  {
+    "id": 1,
+    "img": "weekly-draw/prize5/3.png",
+    "title": "Промокод на Сет \"Де люкс\" при заказе с доставкой от 990 рублей",
+    "type": "type_3"
+  },
+  {
+    "id": 2,
+    "img": "weekly-draw/prize5/4.png",
+    "title": "Сертификат на 3 000 рублей в рестораны Якитория",
+    "type": "type_card"
+  },
+  {
+    "id": 3,
+    "img": "weekly-draw/prize5/5.png",
+    "title": "Фирменный тюбинг",
+    "type": "type_7"
+  },
+  {
+    "id": 4,
+    "img": "weekly-draw/prize5/6.png",
+    "title": "Яндекс \u2028Станция MIDI",
+    "type": "type_card"
+  },
+   {
+     "id": 12,
+     "img": "weekly-draw/prize5/7.png",
+     "title": "Сертификат на 30 000 рублей от Lamoda",
+     "type": "type_card"
+   }
+ ]

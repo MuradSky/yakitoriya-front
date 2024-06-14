@@ -1,0 +1,117 @@
+:root {
+    --font-t: 'CoreRhinoT', sans-serif;
+    --font-l: 'CoreRhinoL', sans-serif;
+    --font-m: 'CoreRhinoM', sans-serif;
+    --font-b: 'CoreRhinoB', sans-serif;
+    --font-h: 'CoreRhinoH', sans-serif;
+}
+
+*, *:after, *:before {
+    box-sizing: border-box;
+
+    leading-trim: both;
+    text-edge: cap;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    font-weight: 500;
+    color: #646cff;
+    text-decoration: inherit;
+}
+
+body {
+    padding: 0;
+    font-family: CoreRhinoM, sans-serif !important;
+    margin: 0;
+    min-height: 100vh;
+    background-color: rgb(48, 139, 154);
+    background-image: url("/src/assets/images/background.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    @include below(768px) {
+        background-image: url("/src/assets/images/background-l.jpg");
+    }
+    @include below(420px) {
+        background: rgb(48, 139, 154);
+    }
+
+    &.ReactModal__Body--open {
+        overflow: hidden;
+    }
+}
+
+.app-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    footer {
+        margin-top: auto;
+    }
+}
+
+h1 {
+    font-size: 3.2em;
+    line-height: 1.1;
+}
+
+button {
+    background-color: transparent;
+    border-radius: 0;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+button:focus,
+button:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+}
+
+
+:focus {
+    outline-style: none;
+    outline-width: 0 !important;
+    outline-color: transparent !important;
+}
+
+.container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    @include below(1480px) {
+        padding: 0 32px;
+    }
+
+    @include below(1024px) {
+        padding: 0 25px;
+    }
+
+    @include below(768px) {
+        padding: 0 12.5px;
+    }
+}
+
+ul, ol {
+    list-style: none;
+    padding: 0;
+}
+
+img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+

@@ -1,0 +1,286 @@
+@import "/src/assets/styles/helpers/mixins";
+
+.block {
+    @include below(1024px) {
+        overflow: hidden;
+    }
+}
+
+.wrap {
+    @include below(1024px) {
+        margin-top: 50px;
+    }
+}
+
+.head {
+    position: relative;
+    margin-bottom: 100px;
+
+    @include below(1024px) {
+        margin-bottom: 0px;
+
+    }
+
+    @include below(768px) {
+        margin-bottom: 40px;
+    }
+
+    &_flower1 {
+        position: absolute;
+        top: -50px;
+        left: 10%;
+
+        @include below(1024px) {
+            width: 100px;
+            height: 100px;
+            left: -80px;
+        }
+
+        @include below(500px) {
+            top: 60px;
+            left: -60px;
+        }
+    }
+    &_flower2 {
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        @include below(1024px) {
+            width: 120px;
+            height: 120px;
+            right: -80px;
+        }
+
+        @include below(500px) {
+            top: 60px;
+            right: -60px;
+        }
+    }
+}
+
+.title {
+    @include fluid-type(1024px, 1920px,  25px, 50px);
+    font-family: CoreRhinoB;
+    line-height: 140%;
+    color: #fff;
+    text-align: center;
+
+    @include below(1024px) {
+        position: relative;
+        z-index: 100;
+    }
+}
+
+
+.section {
+    &:not(:last-child) {
+        margin-bottom: 50px;
+
+        @include below(1024px) {
+            margin-bottom: 30px;
+        }
+
+        @include below(768px) {
+            margin-bottom: 60px;
+        }
+    }
+
+    &_head {
+        @include below(1024px) {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+
+            .section_title {
+                display: block;
+            }
+        }
+
+        @include below(650px) {
+            margin-bottom: 30px;
+        }
+    }
+
+    &_title {
+        font-family: CoreRhinoL;
+        @include fluid-type(768px, 1920px, 18px, 32px);
+        line-height: 140%;
+        text-align: center;
+        color: #fff;
+        margin-bottom: 30px;
+
+        @include below(1024px) {
+            margin-bottom: 0;
+            text-align: left;
+            display: none;
+        }
+    }
+
+    &_wrap {
+        display: flex;
+        @include below(1024px) {
+            display: block;
+        }
+    }
+
+    &_crane {
+        min-width: 280px;
+        height: 280px;
+        @include below(1024px) {
+            min-width: 200px;
+            height: 200px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        &.crane_1 {
+            @include above(1025px) {
+                margin-top: -45px;
+            }
+
+            @include below(1024px) {
+                margin: -10px 20px 0 -35px;
+            }
+
+            @include below(768px) {
+                margin-right: 0px;
+            }
+        }
+        &.crane_2 {
+
+            @include below(1024px) {
+                margin: 0px 10px -45px -25px;
+            }
+
+            @include below(768px) {
+                margin-right: -10px;
+            }
+        }
+        &.crane_3 {
+            @include above(1025px) {
+                margin-top: -16px;
+            }
+
+            @include below(1024px) {
+                margin: 0px 10px -38px -25px;
+            }
+
+            @include below(768px) {
+                margin-right: -10px;
+            }
+        }
+        &.crane_4 {
+            @include above(1025px) {
+                margin-top: -60px;
+            }
+
+            @include below(1024px) {
+                margin: -5px 10px 0 -25px;
+            }
+
+            @include below(768px) {
+                margin-right: -10px;
+            }
+        }
+        &.crane_5 {
+            @include above(1025px) {
+                margin-top: -12px;
+            }
+
+            @include below(1024px) {
+                margin: 0px 10px -43px -25px;
+            }
+
+            @include below(768px) {
+                margin-right: -10px;
+            }
+        }
+
+    }
+}
+
+.prize {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    margin: -20px -10px 0;
+
+    @include below(1024px) {
+        margin: -20px -10px 0;
+    }
+
+    &_item {
+        position: relative;
+        width: calc(16.66666% - 20px);
+        margin: 10px 10px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include below(1440px) {
+            width: calc(20% - 22px);
+        }
+
+        @include below(1200px) {
+            width: calc(25% - 22px);
+        }
+
+        @include below(1024px) {
+            width: calc(20% - 20px);
+            margin: 10px 10px 0;
+        }
+
+        @include below(850px) {
+            width: calc(25% - 20px);
+        }
+
+        @include below(650px) {
+            width: calc(33.33333% - 20px);
+        }
+
+        @include below(500px) {
+            width: calc(50% - 20px);
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 175px;
+            height: 175px;
+            top: 38px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(180deg, #FFF 0%, rgba(255, 255, 255, 0.00) 91.39%);
+            opacity: 0.2;
+            border-radius: 50%;
+            z-index: -1;
+
+            @include below(1280px) {
+                width: 150px;
+                height: 150px;
+            }
+        }
+    }
+
+    &_img {
+        min-height: 100px;
+        margin-bottom: 12px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &_title {
+        @include fluid-type(768px, 1920px, 12px, 14px);
+        line-height: 120%;
+        color: #fff;
+        text-align: center;
+    }
+}

@@ -1,0 +1,186 @@
+[
+  {
+    "id": 2,
+    "gamecode": "82512739",
+    "action": null,
+    "registered_at": "2023-11-25 22:56",
+    "prizes": [
+      {
+        "id": 4,
+        "name": "Регистрационный код на активацию в программе лояльности ресторанов «Якитория» и получение дисконтной карты со скидкой 10%",
+        "description": "• Введите код в специальное поле раздела «Выпустить карту» на сайте https://loyalty.yakitoriya.ru/ • Заполните on-line анкету",
+        "action": "Регистраци промокода",
+        "type": "Гарантированный приз",
+        "gift_code": "5963791",
+        "is_digital": true,
+        "is_food": false,
+        "image": {
+          "id": 5,
+          "path": "https://promo-api.yakitoriya.ru/uploads/prizes/2023-11-22/De2vxLMa50ubtViZFdPjxoFUKYgtdEcpwTyfVFfa.png",
+          "thumb": "https://promo-api.yakitoriya.ru/uploads/prizes/2023-11-22/thumb_De2vxLMa50ubtViZFdPjxoFUKYgtdEcpwTyfVFfa.png",
+          "name": "00_Ya_karta.png",
+          "type": "image/png",
+          "imageable_type": "App\\Models\\Prize",
+          "imageable_id": 4,
+          "created_at": "2023-11-22T07:44:33.000000Z",
+          "updated_at": "2023-11-22T07:44:33.000000Z"
+        }
+      },
+      {
+        "id": 12,
+        "name": "Промокод на скидку 500 рублей при заказе с доставкой от 2 490 рублей в ресторанах Якитория",
+        "description": "• Промокод действует при оформлении заказа на сайте и в мобильном приложении “Якитории” с доставкой в Москве, Московской области и Воронеже до 14.01.24 • Не суммируется с другими акциями и предложениями • Не действует для заказов на самовывоз",
+        "action": "Регистраци промокода",
+        "type": "Гарантированный приз",
+        "gift_code": "N3NJPD4NGF",
+        "is_digital": true,
+        "is_food": false,
+        "image": {
+          "id": 13,
+          "path": "https://promo-api.yakitoriya.ru/uploads/prizes/2023-11-22/c3IokFDirYreUbXB77XhNo3x69kzpIaQ6a1G9yIQ.png",
+          "thumb": "https://promo-api.yakitoriya.ru/uploads/prizes/2023-11-22/thumb_c3IokFDirYreUbXB77XhNo3x69kzpIaQ6a1G9yIQ.png",
+          "name": "02_Ya_dostavka_500.png",
+          "type": "image/png",
+          "imageable_type": "App\\Models\\Prize",
+          "imageable_id": 12,
+          "created_at": "2023-11-22T07:45:38.000000Z",
+          "updated_at": "2023-11-22T07:45:38.000000Z"
+        }
+      },
+      {
+        "id": 26,
+        "name": "Промокод на блюдо «Муругай чизу» при заказе с доставкой от 1 290 рублей",
+        "description": "• Промокод действует при оформлении заказа на сайте и в мобильном приложении “Якитории” с доставкой в Москве, Московской области и Воронеже до 14.01.24 • Не суммируется с другими акциями и предложениями • Не действует для заказов на самовывоз",
+        "action": "Регистраци промокода",
+        "type": "Гарантированный приз",
+        "gift_code": "TGVZYJSPUC",
+        "is_digital": true,
+        "is_food": true,
+        "image": {
+          "id": 27,
+          "path": "https://promo-api.yakitoriya.ru/uploads/prizes/2023-11-22/qt2ziEAu351LMhnXqtVMbpJuZyoOhTP9KGwebYGS.png",
+          "thumb": "https://promo-api.yakitoriya.ru/uploads/prizes/2023-11-22/thumb_qt2ziEAu351LMhnXqtVMbpJuZyoOhTP9KGwebYGS.png",
+          "name": "11_ya_murugaichizu.png",
+          "type": "image/png",
+          "imageable_type": "App\\Models\\Prize",
+          "imageable_id": 26,
+          "created_at": "2023-11-22T07:48:58.000000Z",
+          "updated_at": "2023-11-22T07:48:58.000000Z"
+        }
+      },
+      {
+        "id": 48,
+        "name": "Промокод на блюдо «Муругай чизу» при заказе в ресторане от 1 500 рублей",
+        "description": "• Промокод действует в ресторанах Якитория в Москве, Московской области и Воронеже до 14.01.24 • Не суммируется с другими акциями и предложениями, кроме скидки по дисконтной карте Якитории (5-10%) • Не действует для заказов с собой и на вынос • Чтобы использовать — предъявите промокод официанту",
+        "action": "Регистраци промокода",
+        "type": "Гарантированный приз",
+        "gift_code": "7800024035076",
+        "is_digital": true,
+        "is_food": true,
+        "image": {
+          "id": 49,
+          "path": "https://promo-api.yakitoriya.ru/uploads/prizes/2023-11-22/QoX6Hh0EqxNbu82YgLMdmX5FfIgcQBwuOxikc9oQ.png",
+          "thumb": "https://promo-api.yakitoriya.ru/uploads/prizes/2023-11-22/thumb_QoX6Hh0EqxNbu82YgLMdmX5FfIgcQBwuOxikc9oQ.png",
+          "name": "11_ya_murugaichizu.png",
+          "type": "image/png",
+          "imageable_type": "App\\Models\\Prize",
+          "imageable_id": 48,
+          "created_at": "2023-11-22T07:51:43.000000Z",
+          "updated_at": "2023-11-22T07:51:43.000000Z"
+        }
+      },
+      {
+        "id": 37,
+        "name": "Промокод на блюдо «Сет с угрем» при заказе с доставкой от 4 490 рублей",
+        "description": "• Промокод действует при оформлении заказа на сайте и в мобильном приложении “Якитории” с доставкой в Москве, Московской области и Воронеже до 14.01.24 • Не суммируется с другими акциями и предложениями • Не действует для заказов на самовывоз",
+        "action": "Регистраци промокода",
+        "type": "Гарантированный приз",
+        "gift_code": "9CH7UJR28S",
+        "is_digital": true,
+        "is_food": true,
+        "image": {
+          "id": 38,
+          "path": "https://promo-api.yakitoriya.ru/uploads/prizes/2023-11-22/IBwlkj31Vgrmkc6tuurKiSNx0168irZOaR2Q3XnB.png",
+          "thumb": "https://promo-api.yakitoriya.ru/uploads/prizes/2023-11-22/thumb_IBwlkj31Vgrmkc6tuurKiSNx0168irZOaR2Q3XnB.png",
+          "name": "22_ya_setsugrem.png",
+          "type": "image/png",
+          "imageable_type": "App\\Models\\Prize",
+          "imageable_id": 37,
+          "created_at": "2023-11-22T07:50:25.000000Z",
+          "updated_at": "2023-11-22T07:50:25.000000Z"
+        }
+      },
+      {
+        "id": 58,
+        "name": "Промокод на блюдо «Сет с угрем» при заказе в ресторане от 4 000 рублей",
+        "description": "• Промокод действует в ресторанах Якитория в Москве, Московской области и Воронеже до 14.01.24 • Не суммируется с другими акциями и предложениями, кроме скидки по дисконтной карте Якитории (5-10%) • Не действует для заказов с собой и на вынос • Чтобы использовать — предъявите промокод официанту",
+        "action": "Регистраци промокода",
+        "type": "Гарантированный приз",
+        "gift_code": "7890048479778",
+        "is_digital": true,
+        "is_food": true,
+        "image": {
+          "id": 59,
+          "path": "https://promo-api.yakitoriya.ru/uploads/prizes/2023-11-22/ZW7tPk6tONTkNwo0lisR1AO7c5Ui8tyu0d5juzFF.png",
+          "thumb": "https://promo-api.yakitoriya.ru/uploads/prizes/2023-11-22/thumb_ZW7tPk6tONTkNwo0lisR1AO7c5Ui8tyu0d5juzFF.png",
+          "name": "22_ya_setsugrem.png",
+          "type": "image/png",
+          "imageable_type": "App\\Models\\Prize",
+          "imageable_id": 58,
+          "created_at": "2023-11-22T07:53:10.000000Z",
+          "updated_at": "2023-11-22T07:53:10.000000Z"
+        }
+      },
+      {
+        "id": 13,
+        "name": "Скидка до 25% на redbt.company",
+        "description": "• Промокод предоставляет скидку 10%, которая суммируется с промо-ценами Интернет-магазина или 25%, которая не суммируется с промо-ценами и действует от основной цены • Для того, чтобы воспользоваться промокодом, необходимо зайти на сайт https://redbt.company/, положить товар(ы) в корзину, затем в графе «код купона для скидки» ввести уникальный промокод, сумма будет пересчитана в корзине автоматически • Количество товаров в одном заказе не ограничивается • Промокод действует до 15.01.2024",
+        "action": "Регистраци промокода",
+        "type": "Гарантированный приз",
+        "gift_code": "RED-U2U3S2Q0",
+        "is_digital": true,
+        "is_food": false,
+        "image": {
+          "id": 68,
+          "path": "https://promo-api.yakitoriya.ru/uploads/prizes/2023-11-27/uw5rNZ6viGpvGs9MXnyzaPq5EaRjdidTgJdKjCOt.png",
+          "thumb": "https://promo-api.yakitoriya.ru/uploads/prizes/2023-11-27/thumb_uw5rNZ6viGpvGs9MXnyzaPq5EaRjdidTgJdKjCOt.png",
+          "name": "03_red.png",
+          "type": "image/png",
+          "imageable_type": "App\\Models\\Prize",
+          "imageable_id": 13,
+          "created_at": "2023-11-27T07:24:51.000000Z",
+          "updated_at": "2023-11-27T07:24:51.000000Z"
+        }
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "gamecode": null,
+    "action": "Подтверждение почты",
+    "registered_at": "2023-11-23 16:08",
+    "prizes": [
+      {
+        "id": 1,
+        "name": "Промокод на скидку 20% при заказе с доставкой от 990 рублей в ресторанах Якитория",
+        "description": "• Промокод действует при оформлении заказа на сайте и в мобильном приложении “Якитории” с доставкой в Москве, Московской области и Воронеже до 14.01.24 • Не суммируется с другими акциями и предложениями • Не действует для заказов на самовывоз",
+        "action": "Подтверждение почты",
+        "type": "Гарантированный приз",
+        "gift_code": "LLW4PEK6HS",
+        "is_digital": true,
+        "is_food": false,
+        "image": {
+          "id": 61,
+          "path": "https://promo-api.yakitoriya.ru/uploads/prizes/2023-11-22/HPRkNqeqSkbGQJ5cEToo1ADmqxIMMdzBEZzZJGJJ.png",
+          "thumb": "https://promo-api.yakitoriya.ru/uploads/prizes/2023-11-22/thumb_HPRkNqeqSkbGQJ5cEToo1ADmqxIMMdzBEZzZJGJJ.png",
+          "name": "reg_Ya_dostavka_20.png",
+          "type": "image/png",
+          "imageable_type": "App\\Models\\Prize",
+          "imageable_id": 1,
+          "created_at": "2023-11-22T08:40:28.000000Z",
+          "updated_at": "2023-11-22T08:40:28.000000Z"
+        }
+      }
+    ]
+  }
+]

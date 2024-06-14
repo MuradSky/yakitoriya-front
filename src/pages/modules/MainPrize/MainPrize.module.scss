@@ -1,0 +1,203 @@
+@import "src/assets/styles/helpers/mixins";
+
+.block {
+    padding: 100px 0 45px;
+    overflow: hidden;
+
+    @include below(1024px) {
+        padding: 32px 0;
+    }
+
+    @include below(768px) {
+        padding: 32px 0 120px;
+    }
+}
+.container {
+
+}
+
+.wrap {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.jiguli {
+    margin: 0 -40px 0 -50px;
+
+    @include below(1480px) {
+        margin: 0;
+        position: relative;
+        left: -150px;
+    }
+
+    @include below(1024px) {
+        z-index: 300;
+        left: -25px;
+    }
+
+    @include below(768px) {
+        position: absolute;
+        width:314px;
+        top: 50px;
+        left: -20px;
+    }
+}
+
+.right {
+    width: 39%;
+
+    @include below(768px) {
+        width: 100%;
+    }
+}
+
+.rhomb {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    margin-left: -58px;
+
+    @include below(768px) {
+        max-width: 250px;
+        height: 600px;
+        margin-left: auto;
+        top: -100px;
+        z-index: 1000;
+        right: -10px;
+    }
+
+    &:before {
+        content: "";
+        width: 480px;
+        height: 480px;
+        position: absolute;
+        left: 40px;
+        top: 40px;
+        background-color: rgba(47, 139, 155, .4);
+        z-index: -1;
+        transform: rotate(45deg);
+
+        @include below(1480px) {
+            width: 400px;
+            height: 400px;
+            top: 50%;
+            left: 50%;
+            transform: rotate(45deg) translate(-75%, -5%);
+        }
+
+        @include below(1024px) {
+            width: 280px;
+            height: 280px;
+        }
+
+        @include below(768px) {
+            width: 220px;
+            height: 220px;
+            background-color: rgba(47, 139, 155, .05);
+        }
+
+        @include below(420px) {
+            transform: rotate(45deg) translate(-80%, -12%);
+            background-color: rgba(255, 255, 255, .05);
+        }
+    }
+
+    &_flower {
+        position: absolute;
+        top: -80px;
+        right: 40px;
+
+        @include below(1024px) {
+            right: -140px;
+            top: 0;
+        }
+
+        @include below(768px) {
+            display: none !important;
+        }
+    }
+
+    &_rect {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    &_title {
+        font-family: var(--font-b);
+        line-height: 100%;
+        text-align: center;
+        margin-bottom: 40px;
+        color: #fff;
+
+        @include fluid-type(768px, 1920px, 25px, 50px);
+
+        @include below(1024px) {
+            margin-bottom: 25px;
+        }
+    }
+
+    &_text {
+        font-family: var(--font-m);
+        text-align: center;
+        line-height: 140%;
+        color: #fff;
+        margin-bottom: 40px;
+
+        @include fluid-type(768px, 1920px, 14px, 24px);
+
+        @include below(1024px) {
+            margin-bottom: 25px;
+        }
+    }
+
+    .rhomb_btn {
+        font-size: 24px;
+        width: 100%;
+        max-width: 264px;
+
+        @include fluid-type(768px, 1920px, 16px, 24px);
+
+        @include below(1024px) {
+            max-width: 160px;
+            padding: 15px 10px;
+
+            svg {
+                display: none;
+            }
+        }
+
+        @include below(768px) {
+            padding: 12px;
+            svg {
+                width: 14px;
+                height: 14px;
+                display: block;
+                margin-left: 10px;
+            }
+        }
+    }
+}
+
+.crown {
+    max-width: 378px;
+    margin-right: 50px;
+    margin-top: -150px;
+    margin-left: auto;
+
+    @include below(1024px) {
+        position: relative;
+        right: -150px;
+    }
+
+    @include below(768px) {
+        margin-top: -330px;
+        max-width: 114px;
+        right: -65px;
+    }
+}

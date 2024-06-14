@@ -1,0 +1,75 @@
+variables:
+  DEV_DIR: www/$CI_PROJECT_NAME
+  PROD_DIR: www/$CI_PROJECT_NAME
+  APP_SERVERS: >
+    192.168.2.11
+    192.168.2.12
+
+stages:
+  - build
+  - copy
+  - purge_CDN_cache
+
+cache:
+  paths:
+    - node_modules
+    - package-lock.json
+
+build job:
+  stage: build
+  only:
+    - dev
+    - master
+  script:
+    - cp -av ~/build/.env.frontend.$CI_COMMIT_BRANCH ./.env
+    - source ~/.nvm/nvm.sh
+    - yarn
+    - yarn run build
+  artifacts:
+    expire_in: 1 hour
+    paths:
+      - dist
+
+
+copy dev:
+  stage: copy
+  only:
+    - dev
+  script:
+    - ( [ -d ~/$DEV_DIR.bak ] && rm -rf ~/$DEV_DIR.bak ) || echo 'failed, move to next step'
+    - ( [ -d ~/$DEV_DIR ] && mv ~/$DEV_DIR ~/$DEV_DIR.bak ) || echo 'ok, next'
+    - mkdir -p ~/$DEV_DIR
+    - rsync -aq -e --exclude={".git",".env",".gitlab-ci.yml"} dist ~/$DEV_DIR
+
+copy prod to dev:
+  stage: copy
+  only:
+    - master
+  when: manual
+  script:
+    - ( [ -d ~/$DEV_DIR.bak ] && rm -rf ~/$DEV_DIR.bak ) || echo 'failed, move to next step'
+    - ( [ -d ~/$DEV_DIR ] && mv ~/$DEV_DIR ~/$DEV_DIR.bak ) || echo 'ok, next'
+    - mkdir -p ~/$DEV_DIR
+    - rsync -aq -e --exclude={".git",".env",".gitlab-ci.yml"} dist ~/$DEV_DIR
+
+
+copy prod:
+  stage: copy
+  only:
+    - master
+  when: manual
+  script:
+    - |
+      for SERVER in $APP_SERVERS
+      do
+        echo "rsync to $SERVER"
+        rsync -aq --delete ./dist/ $SERVER:$PROD_DIR
+      done
+
+purge_CDN_cache-prod:
+  stage: purge_CDN_cache
+  only:
+    - master
+  when: manual
+  script:
+    - curl "https://extra.fastconnector.ru/cdn/megafon.php?t=1isdsLK204p3ZY7&meth=purge"

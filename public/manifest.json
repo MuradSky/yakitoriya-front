@@ -1,0 +1,30 @@
+{
+  "name": "Якитория – доставка еды",
+  "lang": "ru",
+  "short_name": "Якитория",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#ffffff",
+  "theme_color": "#039ad3",
+  "description": "Официальный сайт ресторана Якитория - настоящие японская и европейская кухни с доставкой на дом в Москве! Скидки и акции каждый день! Побалуй себя!",
+  "icons": [
+    {
+      "src": "/favicon-48x48.png",
+      "type": "image/png",
+      "sizes": "48x48"
+    }
+  ],
+  "prefer_related_applications": true,
+  "related_applications": [
+    {
+      "platform": "play",
+      "id": "com.voltmobi.yakitoriya",
+      "url": "https://play.google.com/store/apps/details?id=com.voltmobi.yakitoriya"
+    },
+    {
+      "platform": "itunes",
+      "url": "https://itunes.apple.com/ru/app/akitoria/id540328259"
+    }
+  ]
+}

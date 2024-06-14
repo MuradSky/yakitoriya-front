@@ -1,0 +1,192 @@
+@import "src/assets/styles/helpers/mixins";
+
+.block {
+    overflow: hidden;
+    padding-bottom: 100px;
+
+    @include below(1024px) {
+        padding: 0 25px 60px;
+    }
+
+    @include below(768px) {
+        padding: 0 15px 60px;
+    }
+}
+
+.wrap {
+    max-width: 1920px;
+    margin: 0 auto;
+    &:not(:last-child) {
+        margin-bottom: 120px;
+        @include below(1024px) {
+            margin-bottom: 100px;
+        }
+    }
+}
+
+.title {
+    font-family: var(--font-b);
+    font-weight: 400;
+    line-height: 140%;
+    margin-bottom: 60px;
+    color: #fff;
+    text-align: center;
+
+    @include fluid-type(768px, 1920px, 38px, 50px);
+
+    @include below(1024px) {
+        margin-bottom: 50px;
+    }
+
+    @include below(768px) {
+        margin-bottom: 30px;
+        font-size: 25px;
+    }
+}
+
+.slider {
+    margin-bottom: 60px;
+    overflow: visible;
+}
+
+.card1 {
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.20);
+    height: 100% !important;
+    &_head {
+        display: block;
+        height: 180px;
+
+        @include below(1024px) {
+            height: 150px;
+        }
+
+        @include below(500px) {
+            height: 113px;
+        }
+
+        img {
+            height: 100%;
+            object-fit: cover;
+            border-radius: 20px 20px 0px 0px;
+
+            @include below(1024px) {
+                object-fit: contain;
+            }
+        }
+    }
+
+    &_title {
+        font-family: var(--font-m);
+        color: #000;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 120%;
+        text-align: center;
+        padding: 15px;
+
+        @include below(1024px) {
+            font-size: 13px;
+            padding: 10px 10px 15px;
+        }
+
+        @include below(500px) {
+            font-size: 10px;
+        }
+    }
+
+    @include below(1024px) {
+        //height: initial;
+    }
+}
+
+.card2 {
+    border-radius: 20px;
+    background: #16171B;
+    box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.20);
+    height: 100% !important;
+    &_head {
+        height: 200px;
+        @include below(1024px) {
+            height: 150px;
+        }
+
+        @include below(500px) {
+            height: 113px;
+        }
+
+        img {
+            object-fit: cover;
+            height: 100%;
+            border-radius: 20px 20px 0px 0px;
+            @include below(1024px) {
+                object-fit: contain;
+            }
+        }
+    }
+
+    &_title {
+        font-family: var(--font-m);
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 120%;
+        text-align: center;
+        color: #fff;
+        padding: 15px;
+
+        @include below(1024px) {
+            font-size: 14px;
+            padding: 10px 10px 20px;
+        }
+
+        @include below(500px) {
+            font-size: 10px;
+        }
+    }
+
+    @include below(1024px) {
+        //height: initial;
+    }
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 -10px;
+    @include below(1024px) {
+        margin: 0 -100px;
+    }
+    @include below(400px) {
+        justify-content: space-between;
+    }
+    .next,
+    .prev {
+        margin: 0 10px;
+        @include below(1024px) {
+            margin: 0 100px;
+        }
+
+
+    }
+}
+
+.next,
+.prev {
+    width: 50px;
+    height: 24px;
+    border-radius: 50px;
+    transition: box-shadow .3s linear;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    &:hover:not(:active) {
+        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    }
+
+    svg {
+        width: 30px;
+    }
+}

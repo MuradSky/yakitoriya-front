@@ -1,0 +1,489 @@
+@import "src/assets/styles/helpers/mixins";
+
+.block {
+    position: relative;
+
+    overflow: hidden;
+    //max-width: 1920px;
+    //margin: 0 auto;
+
+    //@include below(1440px) {
+    //    padding-top: 50px;
+    //}
+    //
+    //@include below(1024px) {
+    //    padding-top: 35px;
+    //}
+    //
+    @include below(400px) {
+        padding-top: 40px;
+    }
+}
+
+.title {
+    position: absolute;
+    top: 16%;
+    left: 17%;
+    z-index: 400;
+    text-shadow: 2px -2px 0px #55D0E4, 0px 20px 30px rgba(0, 0, 0, 0.4);
+    font-size: 90px;
+    font-family: var(--font-b);
+    font-weight: 400;
+    line-height: 110%;
+    text-transform: uppercase;
+    text-align: center;
+    leading-trim: both;
+    color: #fff;
+    text-edge: cap;
+
+    @include fluid-type(768px, 1920px, 40px, 90px);
+
+    @include below(1300px) {
+        top: 20%;
+    }
+
+    @include below(1024px) {
+        @include fluid-type(768px, 1024px, 40px, 64px);
+        top: 130px;
+        left: 124px;
+    }
+
+    @include below(500px) {
+        top: 80px;
+        left: 0;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+
+    @include below(340px) {
+        top: 11.5%;
+        font-size: 32px;
+    }
+}
+
+.girl {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 400;
+
+    @include above(1025px) {
+        display: none !important;
+    }
+
+    @include below(768px) {
+        width: 30%;
+    }
+
+
+    @include below(768px) {
+        width: 30%;
+    }
+
+    @include below(500px) {
+        width: 52%;
+    }
+
+    @include below(450px) {
+        width: 45%;
+    }
+
+    @include below(420px) {
+        //width: 44%;
+    }
+
+    @include below(375px) {
+        //width: 45%;
+    }
+
+    img {
+        display: block;
+    }
+}
+
+.cranes {
+    position: relative;
+    z-index: 20;
+
+    @include below(1024px) {
+        height: 100vh;
+    }
+
+    @include below(768px) {
+        height: 70vh;
+    }
+
+    @include below(500px) {
+        height: auto;
+    }
+
+
+    @include below(375px) {
+        height: 667px;
+    }
+
+    img {
+        display: block;
+
+        @include below(1700px) {
+        }
+        @include below(1024px) {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            //object-position: bottom;
+
+            @include below(500px) {
+                object-position: initial;
+            }
+        }
+    }
+}
+
+.img {
+    //min-height: 932px;
+    //img {
+    //    min-height: 932px;
+    //    object-fit: cover;
+    //    height: 100%;
+    //}
+}
+
+.rhombus {
+    position: absolute;
+    left: 13.5%;
+    bottom: -6px;
+    z-index: 100;
+    max-width: 600px;
+
+    @include above(501px) {
+        min-height: 350px;
+        min-width: 350px;
+    }
+
+    @include below(1600px) {
+        max-width: 500px;
+    }
+
+    @include below(1440px) {
+        max-width: 460px;
+    }
+
+
+    @include below(1300px) {
+        max-width: 420px;
+    }
+
+    @include below(1024px) {
+        max-width: 550px;
+        left: 23%;
+        bottom: 12%;
+    }
+
+
+    @include below(768px) {
+        max-width: 400px;
+    }
+
+    @include below(640px) {
+        bottom: 15%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    @include below(500px) {
+        bottom: auto;
+        top: 170px;
+        width: 100%;
+        margin: 0 auto;
+        left: 50%;
+        max-width: 420px;
+        transform: translateX(-50%);
+    }
+
+    @include below(430px) {
+        max-width: 400px;
+    }
+
+    @include below(340px) {
+        //top: 120px;
+        max-width: 100%;
+    }
+
+    &_wrap {
+        position: relative;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &_text {
+        font-family: var(--font-m);
+        font-style: normal;
+        font-weight: 400;
+        line-height: 120%;
+        font-size: 20px;
+        width: 100%;
+        max-width: 400px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -20%);
+        text-align: center;
+
+        @include fluid-type(768px, 1920px, 10px, 20px);
+
+        @include below(1600px) {
+            line-height: 120%;
+        }
+
+        @include below(1024px) {
+            transform: translate(-50%, -50%);
+            @include fluid-type(768px, 1024px, 14px, 18px);
+        }
+
+        @include below(768px) {
+            font-size: 12px;
+            transform: translate(-50%, -50%);
+        }
+
+        @include below(500px) {
+            transform: translate(-50%, -100%);
+        }
+
+        @include below(340px) {
+            font-size: 10px;
+        }
+
+        @include below(330px) {
+            transform: translate(-50%, -105%);
+        }
+    }
+
+    &_btn {
+        position: absolute;
+        bottom: 70px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        max-width: 245px;
+
+        @include below(1600px) {
+            bottom: 60px;
+            max-width: 220px;
+        }
+
+        @include below(1440px) {
+            bottom: 55px;
+            max-width: 200px;
+        }
+
+        @include below(1024px) {
+            bottom: 100px;
+            max-width: 220px;
+        }
+
+        @include below(768px) {
+            bottom: 90px;
+            max-width: 165px;
+        }
+
+        @include below(500px) {
+            bottom: 175px;
+        }
+        @include below(375px) {
+            bottom: 145px;
+        }
+        @include below(350px) {
+            bottom: 140px;
+        }
+
+
+        @include below(330px) {
+            bottom: 135px;
+        }
+
+
+        button {
+            width: 100%;
+            @include fluid-type(768px, 1920px, 10px, 24px);
+
+            @include below(1600px) {
+                @include fluid-type(768px, 1920px, 10px, 20px);
+                padding: 12px;
+            }
+
+            @include below(1440px) {
+                padding: 10px 14px;
+            }
+
+            @include below(1024px) {
+                padding: 15px 10px;
+                @include fluid-type(768px, 1024px, 16px, 24px);
+            }
+
+            @include below(340px) {
+                font-size: 14px;
+                padding: 12px;
+            }
+
+            @include below(768px) {
+                svg {
+                    display: none;
+                }
+            }
+
+            @include below(500px) {
+                svg {
+                    margin-left: 12px;
+                    width: 16px;
+                    height: 16px;
+                    display: block;
+                }
+            }
+
+            @include below(350px) {
+                font-size: 14px;
+                padding: 12px;
+            }
+        }
+    }
+}
+
+.jiguli {
+    position: absolute;
+    top: 22%;
+    left: 33%;
+    max-width: 540px;
+    z-index: 100;
+    @include below_and_above(1024px, 501px) {
+        z-index: 10;
+    }
+
+    @include below(1800px) {
+        top: 20%;
+        left: 36%;
+    }
+
+    @include below(1700px) {
+        top: 18%;
+        left: 37%;
+        max-width: 480px;
+    }
+
+    @include below(1600px) {
+        top: 32%;
+        left: 37%;
+        max-width: 400px;
+    }
+
+    @include below(1550px) {
+        top: 25%;
+        left: 37%;
+    }
+
+    @include below(1440px) {
+        top: 28%;
+        left: 36%;
+        max-width: 350px;
+    }
+
+    @include below(1380px) {
+        top: 25%;
+        left: 38%;
+    }
+
+    @include below(1200px) {
+        top: 24%;
+        left: 40%;
+        max-width: 300px;
+    }
+
+    @include below(1130px) {
+        top: 20%;
+        left: 40%;
+        max-width: 280px;
+    }
+
+    @include below(1080px) {
+        left: 42%;
+        max-width: 260px;
+    }
+
+    @include below(1024px) {
+        top: 60%;
+        right: -2%;
+        left: auto;
+        max-width: 360px;
+        z-index: 100;
+    }
+
+    @include below(850px) {
+        top: 63%;
+        right: -3%;
+    }
+
+    @include below(768px) {
+        top: 57%;
+        right: -5%;
+        max-width: 250px;
+    }
+
+    @include below(640px) {
+        right: -10%;
+    }
+
+    @include below(570px) {
+        top: 60%;
+    }
+
+    @include below(500px) {
+        top: 52%;
+        right: 0;
+        z-index: 110;
+        width: 100%;
+        max-width: 270px;
+    }
+
+    @include below(480px) {
+        //right: -7%;
+        max-width: 260px;
+        top: 52%;
+    }
+
+    @include below(450px) {
+        max-width: 250px;
+        top: 56%;
+    }
+
+    @include below(430px) {
+        max-width: 240px;
+    }
+
+    @include below(420px) {
+        width: initial;
+        top: 58%;
+        //max-width: 260px;
+    }
+
+    @include below(380px) {
+        top: 61%;
+        max-width: 210px;
+        //right: -10%;
+    }
+
+    @include below(350px) {
+        top: 56%;
+        max-width: 180px;
+    }
+}
+
+.btn {
+    position: absolute;
+    bottom: 10%;
+    z-index: 100;
+    left: 47%;
+}

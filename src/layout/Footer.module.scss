@@ -1,0 +1,305 @@
+@import "src/assets/styles/helpers/mixins";
+
+.footer {
+    padding: 60px 0;
+    background-color: #000;
+
+    @include below(1024px) {
+        padding: 40px 0;
+    }
+
+    @include below(768px) {
+        padding: 30px 0;
+    }
+}
+
+.top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 60px;
+
+    @include below(1024px) {
+        margin-bottom: 40px;
+        flex-wrap: wrap;
+    }
+
+    @include below(768px) {
+        flex-direction: column;
+    }
+}
+
+.phone {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    margin-left: auto;
+
+    @include below(1024px) {
+        width: 100%;
+        order: 3;
+        margin-top: 24px;
+        margin-left: 0;
+    }
+
+    p {
+        font-size: 16px;
+
+        @include below(1024px) {
+            font-size: 14px;
+        }
+    }
+
+    a {
+        margin-top: 15px;
+        font-size: 28px;
+        color: currentColor;
+        &:hover:not(:active) {
+            text-decoration: underline;
+        }
+
+        @include below(1024px) {
+            font-size: 20px;
+        }
+    }
+}
+
+.links {
+    @include below(768px) {
+        margin-bottom: 40px;
+    }
+
+    a {
+        display: flex;
+        align-items: center;
+        font-size: 20px;
+        font-style: normal;
+        font-family: var(--font-m);
+        line-height: 100%;
+        color: #fff;
+        transition: opacity .3s linear;
+
+        &:hover:not(:active) {
+            opacity: .5;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 28px;
+            @include below(768px) {
+                margin-bottom: 20px;
+            }
+        }
+
+        @include below(1024px) {
+            font-size: 16px;
+        }
+    }
+
+    a svg {
+        width: 16px;
+        height: 16px;
+        color: #ed1b34;
+        margin-left: 10px;
+    }
+}
+
+.support {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-left: 32px;
+
+    @include below(768px) {
+        align-items: flex-start;
+        margin-left: 0;
+    }
+
+    &_title {
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 100%;
+        margin-bottom: 24px;
+        color: #fff;
+
+        @include below(768px) {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+    }
+
+    &_btn {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 100%;
+        color: #fff;
+        padding: 15px 26px;
+        border-radius: 50px;
+        border: 2px solid rgba(255, 255, 255, 0.30);
+        transition: background-color .3s linear;
+        &:hover:not(:active) {
+            background-color: rgba(255, 255, 255, .1);
+        }
+
+        @include below(768px) {
+            font-size: 16px;
+            padding: 15px 23px;
+        }
+    }
+}
+
+.content {
+    margin-bottom: 60px;
+
+    @include below(1024px) {
+        margin-bottom: 40px;
+    }
+    @include below(768px) {
+        margin-bottom: 30px;
+    }
+    p {
+        font-size: 20px;
+        font-family: var(--font-l);
+        line-height: normal;
+        color: rgba(255, 255, 255, 0.60);
+
+        @include below(1024px) {
+            font-size: 16px;
+        }
+
+
+        @include below(768px) {
+            font-size: 13px;
+        }
+
+        &:first-child {
+            margin-bottom: 20px;
+        }
+    }
+    p a {
+        color: rgba(255, 255, 255, 0.60);
+        text-decoration: underline;
+
+        &:hover:not(:active) {
+            text-decoration: none;
+        }
+    }
+}
+
+.bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include below(768px) {
+        flex-wrap: wrap;
+    }
+
+    svg {
+        width: 160px;
+        height: 16px;
+        margin-left: -10px;
+    }
+
+    .bottom_age {
+        font-size: 20px;
+        font-family: var(--font-b);
+        line-height: 100%;
+
+        border-radius: 50px;
+        border: 1px solid #fff;
+        width: 64px;
+        height: 64px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+
+        @include below(768px) {
+            font-size: 17px;
+            width: 48px;
+            height: 48px;
+        }
+    }
+}
+
+.social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: auto;
+
+    @include below(768px) {
+        display: block;
+        width: 100%;
+        order: -1;
+        margin-bottom: 24px;
+    }
+
+    a {
+        color: #fff;
+        font-size: 14px;
+
+        @include below(1024px) {
+            font-size: 12px;
+        }
+
+        &:hover:not(:active) {
+            text-decoration: underline;
+        }
+
+        &:not(:last-child) {
+            margin-right: 32px;
+            display: flex;
+            align-items: center;
+
+            @include below(768px) {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+
+            &:hover {
+                svg {
+                    transform: scale(1.1);
+                }
+            }
+        }
+
+        div {
+            width: 28px;
+            height: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+
+            @include below(1024px) {
+                width: 24px;
+                height: 24px;
+                margin-right: 6px;
+            }
+
+            @include below(768px) {
+                width: 18px;
+                height: 18px;
+                margin-right: 10px;
+            }
+        }
+
+        svg {
+            transition: transform .1s linear;
+            width: 28px;
+            height: 28px;
+
+            @include below(1024px) {
+                width: 24px;
+                height: 24px;
+            }
+
+            @include below(768px) {
+                width: 18px;
+                height: 18px;
+                margin-right: -10px;
+            }
+        }
+    }
+}

@@ -1,0 +1,38 @@
+ [
+  {
+    "id": 1,
+    "img": "weekly-draw/prize3/1.png",
+    "title": "Подарочный набор из ассортимента Simple Group №3",
+    "type": "type_card"
+  },
+  {
+    "id": 2,
+    "img": "weekly-draw/prize3/1.png",
+    "title": "Подарочный набор из ассортимента Simple Group №4",
+    "type": "type_card"
+  },
+  {
+    "id": 3,
+    "img": "weekly-draw/prize3/1.png",
+    "title": "Подарочный набор из ассортимента Simple Group №5",
+    "type": "type_card"
+  },
+  {
+    "id": 4,
+    "img": "weekly-draw/prize3/4.png",
+    "title": "Промокод на скидку 50% на доставку при заказе от 990 рублей в ресторанах Якитория",
+    "type": "type_card"
+  },
+  {
+    "id": 5,
+    "img": "weekly-draw/prize3/5.png",
+    "title": "Сертификат на 2 000 рублей в рестораны Якитория",
+    "type": "type_card"
+  },
+  {
+    "id": 6,
+    "img": "weekly-draw/prize3/6.png",
+    "title": "Фирменная футболка",
+    "type": "type_3"
+  }
+]

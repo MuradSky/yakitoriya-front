@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "img": "weekly-draw/prize2/1.png",
+    "title": "Сертификат на 4 000 рублей от Lamoda",
+    "type": "type_card"
+  },
+  {
+    "id": 2,
+    "img": "weekly-draw/prize2/2.png",
+    "title": "Фирменный чехол на чемодан",
+    "type": "type_2"
+  },
+  {
+    "id": 3,
+    "img": "weekly-draw/prize2/3.png",
+    "title": "Подарочный набор из ассортимента Simple Group № 2",
+    "type": "type_card"
+  },
+  {
+    "id": 4,
+    "img": "weekly-draw/prize2/4.png",
+    "title": "Промокод на скидку 700 рублей на доставку при заказе от 990 рублей в ресторанах Якитория",
+    "type": "type_card"
+  },
+  {
+    "id": 5,
+    "img": "weekly-draw/prize2/5.png",
+    "title": "Сертификат на 1 500 рублей в рестораны Якитория",
+    "type": "type_card"
+  }
+]

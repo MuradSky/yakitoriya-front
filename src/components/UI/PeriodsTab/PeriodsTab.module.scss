@@ -1,0 +1,126 @@
+@import "src/assets/styles/helpers/mixins";
+
+.list {
+    display: flex;
+    align-items: center;
+    @include below(1024px) {
+        overflow-y: hidden;
+        overflow-x: auto;
+        padding: 10px 0;
+    }
+
+    li {
+        flex: auto;
+        width: 240px;
+        background-color: #f4f4f4;
+
+        &:first-child {
+            border-radius: 40px 0 0 40px;
+        }
+        &:last-child {
+            border-radius: 0 40px 40px 0;
+        }
+        @include below(1024px) {
+            white-space: nowrap;
+            min-width: 130px;
+        }
+
+        @include below(768px) {
+            min-width: 110px;
+        }
+    }
+
+    li.isActive {
+
+        button {
+            &:before {
+                opacity: 1;
+            }
+        }
+
+        button span {
+            color: #fff;
+        }
+
+        button:not(.main) span {
+            &:first-child {
+                color: rgba(255, 255, 255, 0.70);
+                margin-bottom: 7px;
+            }
+
+            &:last-child {
+                color: #fff;
+            }
+        }
+    }
+
+    button {
+        position: relative;
+        font-family: var(--font-m);
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 100%;
+        padding: 0 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        border-radius: 40px;
+        transition: background-color .3s linear;
+        height: 52px;
+
+        @include below(1200px) {
+            font-size: 13px;
+            height: 49px;
+        }
+
+        @include below(768px) {
+            font-size: 10px;
+            height: 29px;
+        }
+
+        &:hover:not(:active) {
+            background-color: #fff;
+        }
+        span {
+            color: #000;
+            z-index: 10;
+            text-align: center;
+        }
+
+        &:before {
+            content: "";
+            background-color: #ed1b34;
+            position: absolute;
+            top: -20%;
+            left: 0;
+            width: 100%;
+            height: 140%;
+            z-index: 1;
+            border-radius: 40px;
+            opacity: 0;
+            transition: opacity .3s linear;
+
+            @include below(1200px) {
+                height: 120%;
+                top: -10%;
+            }
+
+            @include below(768px) {
+                height: 140%;
+                top: -20%;
+            }
+        }
+
+        &:disabled {
+            opacity: .5;
+            cursor: no-drop;
+        }
+
+        &.main {
+
+        }
+    }
+}

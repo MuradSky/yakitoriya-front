@@ -1,0 +1,108 @@
+.modal-prize-swiper {
+    @include below(768px) {
+        padding-bottom: 150px;
+    }
+
+    .swiper-button-prev {
+        @include below(1024px) {
+            left: 10%;
+        }
+    }
+
+    .swiper-button-next {
+        @include below(1024px) {
+            right: 10%;
+        }
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        top: 45%;
+        width: 80px;
+        height: 80px;
+        background-color: rgba(255, 255, 255, 0.4);
+        border-radius: 50%;
+        border: 1px solid #fff;
+
+        @include below(1024px) {
+            width: 32px;
+            height: 32px;
+        }
+
+        @include below(768px) {
+            display: none !important;
+        }
+
+        &::after {
+            font-size: 26px;
+            color: #fff;
+
+            @include below(1024px) {
+                font-size: 18px;
+            }
+        }
+
+
+    }
+
+}
+
+.content-slider-swiper {
+    .swiper-wrapper {
+        align-items: flex-start;
+
+    }
+    .swiper-slide {
+        height: auto;
+    }
+}
+
+
+.slider-cards {
+    .swiper-wrapper {
+        align-items: stretch;
+        @include below(768px) {
+            flex-direction: row;
+            margin: -5px -2.5px 0 !important;
+        }
+
+        .swiper-slide {
+            height: auto;
+            @include below(768px) {
+                height: initial !important;
+                margin: 5px 2.5px 0 !important;
+            }
+        }
+    }
+
+    .swiper-pagination {
+        top: auto;
+        bottom: -82px;
+        z-index: 600;
+        padding: 5px 0;
+        @include above(1025px) {
+            display: none !important;
+        }
+        .swiper-pagination-bullet {
+
+            margin: 0 10px;
+            background: rgba(255, 255, 255, .5);
+        }
+
+        .swiper-pagination-bullet-active-prev,
+        .swiper-pagination-bullet-active-next {
+            transform: scale(1);
+        }
+
+        .swiper-pagination-bullet-active-main {
+            background: #fff;
+            transform: scale(1.2);
+        }
+
+        .swiper-pagination-bullet-active-prev-prev,
+        .swiper-pagination-bullet-active-next-next {
+            transform: scale(.7);
+        }
+    }
+}
+

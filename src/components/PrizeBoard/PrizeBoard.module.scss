@@ -1,0 +1,749 @@
+@import "src/assets/styles/helpers/mixins";
+
+.board {
+    width: 100%;
+    max-width: 1078px;
+    margin: 130px auto 0;
+    position: relative;
+    height: 720px;
+
+    @include below(1200px) {
+        height: 472px;
+        max-width: 760px;
+    }
+
+    @include below(768px) {
+        height: 550px;
+        max-width: 350px;
+        margin: 80px auto 0;
+    }
+
+    @include below(370px) {
+        margin: 50px auto 0;
+        max-width: 295px;
+    }
+}
+
+.diamond_square {
+    position: relative;
+    width: 197px;
+    height: 197px;
+    background: linear-gradient(225deg, #000 0%, #373736 99.91%);
+    transition: box-shadow .3s linear;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include below(1200px) {
+        width: 145px;
+        height: 145px;
+    }
+
+    @include below(768px) {
+        width: 95px;
+        height: 95px;
+    }
+
+    @include below(370px) {
+        width: 80px;
+        height: 80px;
+    }
+
+    img {
+        width: initial;
+        height: initial;
+        max-width: initial;
+        transform: rotate(-45deg);
+
+        @include below(768px) {
+            width: 30px;
+            height: 30px;
+        }
+    }
+}
+
+.diamond_wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.diamond_pattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    img {
+        width: initial;
+        height: initial;
+        max-width: initial;
+
+        transform: rotate(-45deg) translate(0, -74px);
+        display: block;
+    }
+}
+
+.diamond_inner {
+    opacity: 0;
+    //visibility: hidden;
+    transition: all .3s linear;
+}
+
+.diamond {
+    cursor: pointer;
+    transform: rotate(45deg);
+    width: 255px;
+    height: 255px;
+    //background-color: #ccc;
+    position: absolute;
+    box-shadow: 0px 30px 40px rgba(0, 0, 0, 0.30);
+    background-repeat: no-repeat;
+    background-position:  center;
+
+    @include below(1200px) {
+        width: 180px;
+        height: 180px;
+    }
+
+    @include below(768px) {
+        width: 125px;
+        height: 125px;
+    }
+
+    @include below(370px) {
+        width: 102px;
+        height: 102px;
+    }
+
+    &.isHover {
+        .crane {
+            img {
+                transform: scale(1.05);
+            }
+        }
+
+    }
+
+    &:not(.isVisible) {
+
+    }
+
+    &_1 {
+        top: 0;
+        left: 52px;
+        z-index: 10;
+        @include below(1200px) {
+            left: 37px;
+        }
+
+        @include below(768px) {
+            left: 25px;
+        }
+
+        &.isHover {
+            .diamond_square {
+                box-shadow: rgba(255, 245, 0, .7) 0px 10px 36px 0px, rgba(154, 108, 0, .7) 0px -10px 36px 1px;
+            }
+        }
+    }
+
+
+    &_2 {
+        top: 0;
+        left: 410px;
+        z-index: 20;
+
+        @include below(1200px) {
+            left: 50%;
+            transform: translateX(-50%) rotate(45deg);
+        }
+
+        @include below(768px) {
+            left: auto;
+            right: 25px;
+            transform: rotate(45deg);
+        }
+
+        &.isHover {
+            .diamond_square {
+                box-shadow: rgba(10, 109, 239, .7) 0px 10px 36px 0px, rgba(2, 30, 70, .7) 0px -10px 36px 1px;
+            }
+        }
+    }
+
+    &_3 {
+        top: 0;
+        left: 71%;
+        z-index: 10;
+        @include below(1200px) {
+            left: 544px;
+        }
+
+        @include below(768px) {
+            top: 16%;
+            left: 50%;
+            transform: translateX(-50%) rotate(45deg);
+            z-index: 21;
+        }
+
+        @include below(370px) {
+            top: 13%;
+        }
+
+        &.isHover {
+            .diamond_square {
+                box-shadow: rgba(253, 146, 0, .7) 0px 10px 36px 0px, rgba(194, 44, 0, .7) 0px -10px 36px 1px;
+            }
+        }
+    }
+
+    &_4 {
+        top: 178px;
+        left: 231px;
+        z-index: 20;
+        @include below(1200px) {
+            top: 126px;
+            left: 163px;
+        }
+
+        @include below(768px) {
+            top: 32%;
+            left: 25px;
+            z-index: 22;
+        }
+        @include below(370px) {
+            top: 26%;
+        }
+        &.isHover {
+            .diamond_square {
+                box-shadow: rgba(232, 224, 224, 1) 0px 10px 36px 0px, rgba(97, 89, 89, 1) 0px 0px 0px 1px;
+
+            }
+        }
+    }
+
+    &_5 {
+        top: 179px;
+        left: 589px;
+        z-index: 30;
+
+        @include below(1200px) {
+            top: 126px;
+            left: 417px;
+        }
+        @include below(768px) {
+            top: 32%;
+            right: 25px;
+            left: auto;
+        }
+        @include below(370px) {
+            top: 26%;
+        }
+
+        &.isHover {
+            .diamond_square {
+                box-shadow: rgba(34, 178, 1, .7) 0px 10px 36px 0px, rgba(240, 89, 152, .7) 0px -10px 36px 0px;
+            }
+        }
+    }
+
+    &_6 {
+        top: 357px;
+        left: 409px;
+        z-index: 40;
+        @include below(1200px) {
+            top: 252px;
+            left: 50%;
+            transform: translateX(-50%) rotate(45deg);
+        }
+
+        @include below(768px) {
+            top: 48%;
+        }
+
+        @include below(370px) {
+            top: 39.2%;
+        }
+    }
+
+    &_7 {
+        top: 357px;
+        left: 52px;
+
+        @include below(1200px) {
+            top: 254px;
+            left: 37px;
+
+            .diamond_pattern {
+                img {
+                    transform: rotate(-45deg) translate(0, -127px) scale(.72);
+                }
+            }
+        }
+
+        @include below(768px) {
+            top: 64%;
+            left: 25px;
+
+            .diamond_pattern {
+                img {
+                    transform: rotate(-45deg) translate(0, -165px) scale(.5);
+                }
+            }
+        }
+
+        @include below(370px) {
+            top: 52.5%;
+
+            .diamond_pattern {
+                img {
+                    transform: rotate(-45deg) translate(0, -182px) scale(.4);
+                }
+            }
+        }
+    }
+
+    &_8 {
+        top: 358px;
+        left: 71%;
+
+        @include below(1200px) {
+            top: 253px;
+            left: 545px;
+
+            .diamond_pattern {
+                img {
+                    transform: rotate(-45deg) translate(0, -127px) scale(.72);
+                }
+            }
+        }
+
+        @include below(768px) {
+            top: 64%;
+            left: auto;
+            right: 25px;
+
+            .diamond_pattern {
+                img {
+                    transform: rotate(-45deg) translate(0, -165px) scale(.5);
+                }
+            }
+        }
+
+        @include below(370px) {
+            top: 52.5%;
+
+            .diamond_pattern {
+                img {
+                    transform: rotate(-45deg) translate(0, -182px) scale(.4);
+                }
+            }
+        }
+    }
+}
+
+.crane {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+        width: initial;
+        height: initial;
+        max-width: initial;
+
+        transition: transform .3s linear;
+    }
+
+    &.crane_main {
+        transform: rotate(-45deg) translate(-16px, -10px);
+
+        @include below(1200px) {
+            transform: rotate(-45deg) translate(-12px, -5px) scale(.7);
+        }
+
+        @include below(768px) {
+            transform: rotate(-45deg) translate(-8px, -5px) scale(.48);
+        }
+
+        @include below(370px) {
+            transform: rotate(-45deg) translate(-5px, -3px) scale(.4);
+        }
+    }
+
+    &.crane_1 {
+        transform: rotate(-45deg) translate(-78px, -100px);
+
+        @include below(1200px) {
+            transform: rotate(-45deg) translate(-51px, -51px) scale(0.65);
+        }
+
+        @include below(768px) {
+            transform: rotate(-45deg) translate(-32px, -27px) scale(0.4);
+        }
+
+        @include below(370px) {
+            transform: rotate(-45deg) translate(-24px, -14px) scale(0.3);
+        }
+    }
+
+    &.crane_2 {
+        transform: rotate(-45deg) translate(17px, -116px) scale(1.5);
+
+        @include below(1200px) {
+            transform: rotate(-45deg) translate(12px, -60px) scale(.95);
+        }
+
+        @include below(768px) {
+            transform: rotate(-45deg) translate(8px, -43px) scale(0.65);
+        }
+
+        @include below(370px) {
+            transform: rotate(-45deg) translate(6px, -20px) scale(0.45);
+        }
+    }
+
+    &.crane_3 {
+        transform: rotate(-45deg) translate(1px, -40px);
+
+        @include below(1200px) {
+            transform: rotate(-45deg) translate(0px, -14px) scale(0.65);
+        }
+
+        @include below(768px) {
+            transform: rotate(-45deg) translate(0px, -4px) scale(0.4);
+        }
+
+        @include below(370px) {
+            transform: rotate(-45deg) translate(0px, 3px) scale(0.3);
+        }
+    }
+
+    &.crane_4 {
+        transform: rotate(-45deg) translate(-52px, -48px);
+
+        @include below(1200px) {
+            transform: rotate(-45deg) translate(-33px, -21px) scale(0.65);
+        }
+
+        @include below(768px) {
+            transform: rotate(-45deg) translate(-21px, -9px) scale(0.4);
+        }
+
+        @include below(370px) {
+            transform: rotate(-45deg) translate(-16px, 0px) scale(0.3);
+        }
+    }
+
+    &.crane_5 {
+        transform: rotate(-45deg) translate(-15px, -20px);
+        @include below(1200px) {
+            transform: rotate(-45deg) translate(-8px, -1px) scale(0.65);
+        }
+
+        @include below(768px) {
+            transform: rotate(-45deg) translate(-5px, 3px) scale(0.4);
+        }
+
+        @include below(370px) {
+            transform: rotate(-45deg) translate(-4px, 8px) scale(0.3);
+        }
+    }
+}
+
+.tooltip_2 {
+    box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.20);
+    border-radius: 10px;
+    background-color: #fff;
+    position: absolute;
+
+    z-index: 100;
+    width: 144px;
+    height: 50px;
+    transform: rotate(-45deg);
+
+    @include below(1200px) {
+        border-radius: 8px;
+        width: 50px;
+        height: 32px;
+    }
+
+    img {
+        width: auto;
+        height: 25px;
+        margin: 7px 7px 0;
+    }
+
+    &_1 {
+        left: 39%;
+        bottom: 13%;
+
+        @include below(1200px) {
+            left: 70%;
+            bottom: 6%;
+        }
+
+        @include below(768px) {
+            left: 65%;
+        }
+    }
+
+    &_2 {
+        left: 44%;
+        bottom: 18%;
+
+        @include below(1200px) {
+            left: 70%;
+            bottom: 6%;
+        }
+
+        @include below(768px) {
+            left: 65%;
+        }
+    }
+
+    &_3 {
+        left: 44%;
+        bottom: 18%;
+
+        @include below(1200px) {
+            left: 70%;
+            bottom: 6%;
+        }
+
+        @include below(768px) {
+            left: 65%;
+        }
+    }
+
+    &_7 {
+        bottom: 15%;
+        left: 48%;
+
+        @include below(1200px) {
+            bottom: 8%;
+            left: 70%;
+        }
+
+        @include below(768px) {
+            left: 62%;
+            bottom: 5%;
+        }
+    }
+
+    p {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 140%;
+        text-decoration-line: underline;
+        color: #ed1b34;
+        text-align: center;
+        margin: 12px 0 0;
+        @include below(1200px) {
+            font-size: 12px;
+            text-transform: capitalize;
+            margin: 6px 0 0;
+        }
+        i {
+            font-style: normal;
+            @include below(1200px) {
+                display: none;
+            }
+        }
+    }
+
+    span {
+        position: absolute;
+        bottom: -12px;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.20);
+        background-color: #ED1B34;
+        padding: 0 6.5px;
+        height: 28px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include below(1200px) {
+            height: 20px;
+            padding: 0 4.5px;
+        }
+
+        i {
+            margin-left: 2px;
+            font-size: 14px;
+            font-weight: 400;
+            font-style: normal;
+            line-height: 140%;
+            color: #fff;
+
+            @include below(1200px) {
+                font-size: 12px;
+            }
+        }
+
+        svg {
+            width: 14px;
+            height: 14px;
+
+            @include below(1200px) {
+                width: 9px;
+                height: 9px;
+            }
+        }
+    }
+}
+
+.tooltip {
+    position: absolute;
+    left: 25%;
+    bottom: 24px;
+    z-index: 100;
+    background-color: #fff;
+    box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.20);
+    border-radius: 15px;
+    padding: 15px;
+    width: 270px;
+
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 120%;
+
+    text-align: center;
+
+    transform: rotate(-45deg);
+
+    @include below(1200px) {
+        bottom: 12px;
+        left: 48%;
+        font-size: 12px;
+        width: 120px;
+        padding: 6px 5px 8px;
+        border-radius: 8px;
+
+        br {
+            display: none;
+        }
+    }
+
+    @include below(768px) {
+        bottom: 18px;
+        left: 21%;
+    }
+
+    @include below(370px) {
+        font-size: 10px;
+        bottom: 10px;
+        left: 25%;
+        width: 95px;
+    }
+}
+
+
+.prize_content {
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+    .email_prize {
+        margin: -120px 0 -80px;
+
+        @include below(1200px) {
+            margin: -60px 0 -60px;
+        }
+
+        @include below(768px) {
+            margin: -50px 0 -45px;
+        }
+
+        @include below(370px) {
+            margin: -45px 0 -40px;
+        }
+    }
+
+    .fiend_prize {
+        margin: -130px 0 -70px;
+
+    }
+
+    p {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 120%;
+        text-align: center;
+        color: #fff;
+        margin: 20px 0;
+
+        @include below(1200px) {
+            font-size: 12px;
+            margin: 15px 0;
+        }
+
+        @include below(768px) {
+            font-size: 8px;
+            margin: 12px 0;
+        }
+    }
+
+    svg {
+        &:first-child {
+            @include below(1200px) {
+                width: 30px;
+                height: 30px;
+            }
+
+            @include below(768px) {
+                width: 20px;
+                height: 20px;
+            }
+        }
+
+        &:last-child {
+            @include below(1200px) {
+                width: 35px;
+                height: 35px;
+            }
+
+            @include below(768px) {
+                width: 24px;
+                height: 24px;
+            }
+        }
+    }
+}
+.prize_friend,
+.prize_email {
+    position: relative;
+    z-index: 100;
+    transform: rotate(-45deg) translate(-20px, 20px);
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}

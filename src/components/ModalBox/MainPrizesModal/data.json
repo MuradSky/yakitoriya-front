@@ -1,0 +1,100 @@
+[
+  {
+    "gamecode": "54543273",
+    "action": null,
+    "registered_at": "2023-11-22 09:51",
+    "prizes": [
+      {
+        "id": 4,
+        "name": "Регистрационный код на активацию в программе лояльности и получение дисконтной карты на скидку 10%",
+        "description": null,
+        "action": "Регистраци промокода",
+        "type": "Гарантированный приз",
+        "gift_code": "KI4vTBNO",
+        "is_digital": true,
+        "image": {
+          "path": "https://promo-api.yakitoriya.ru/uploads/prizes/2023-11-22/l1N4Pek3LS6xkUm6UBZ4SqgY4F1oCGGrnOaOeO0N.png"
+        },
+        "is_food": false
+      },
+      {
+        "id": 11,
+        "name": "Промокод на скидку 300 рублей на доставку при заказе от 1 290 рублей в ресторанах Якитория",
+        "description": null,
+        "action": "Регистраци промокода",
+        "type": "Гарантированный приз",
+        "gift_code": "7cN857oB"
+      },
+      {
+        "id": 27,
+        "name": "Промокод на блюдо «Детский бенто с наггетсами»",
+        "description": null,
+        "action": "Регистраци промокода",
+        "type": "Гарантированный приз",
+        "gift_code": "PpDxTYgN"
+      },
+      {
+        "id": 59,
+        "name": "Промокод «Якитория» на «Ролл Мозаика»",
+        "description": null,
+        "action": "Регистраци промокода",
+        "type": "Гарантированный приз",
+        "gift_code": "7BfHlVDN"
+      },
+      {
+        "id": 19,
+        "name": "Промокод на блюдо «Персона Грата»",
+        "description": null,
+        "action": "Регистраци промокода",
+        "type": "Гарантированный приз",
+        "gift_code": "VxxSLSGr"
+      },
+      {
+        "id": 41,
+        "name": "Промокод на блюдо «Персона Грата»",
+        "description": null,
+        "action": "Регистраци промокода",
+        "type": "Гарантированный приз",
+        "gift_code": "KjcbiFuF"
+      },
+      {
+        "id": 13,
+        "name": "Промокод от RED на скидку не менее 10 % без ограничения по сумме для всех клиентов",
+        "description": null,
+        "action": "Регистраци промокода",
+        "type": "Гарантированный приз",
+        "gift_code": "agG4Nnwv"
+      }
+    ]
+  },
+  {
+    "gamecode": null,
+    "action": "Подтверждение почты",
+    "registered_at": null,
+    "prizes": [
+      {
+        "id": 1,
+        "name": "Промокод на скидку 20% на доставку при заказе от 990 рублей в ресторанах Якитория",
+        "description": null,
+        "action": "Подтверждение почты",
+        "type": "Гарантированный приз",
+        "gift_code": "jUpBZNtL"
+      }
+    ]
+  },
+  {
+    "gamecode": null,
+    "action": "Подтверждение почты",
+    "registered_at": null,
+    "prizes": [
+      {
+        "id": 1,
+        "name": "Промокод на скидку 20% на доставку при заказе от 990 рублей в ресторанах Якитория",
+        "description": null,
+        "action": "Подтверждение почты",
+        "type": "Гарантированный приз",
+        "gift_code": "jUpBZNtL"
+      }
+    ]
+  }
+]

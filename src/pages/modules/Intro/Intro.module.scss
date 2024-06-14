@@ -1,0 +1,41 @@
+@import "src/assets/styles/helpers/mixins";
+
+.intro {
+    position: relative;
+    padding: 130px 0 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    @include below(1200px) {
+        padding: 50px 0;
+    }
+
+    @include below(1024px) {
+        padding: 40px 15px 20px;
+    }
+}
+
+.board {
+    overflow: hidden;
+    padding-bottom: 60px;
+    margin-bottom: -60px;
+}
+
+.bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: contain;
+
+        @include below(1800px) {
+            object-fit: contain;
+        }
+    }
+}
